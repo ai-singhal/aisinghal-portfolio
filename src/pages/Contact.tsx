@@ -17,6 +17,19 @@ const XLogo = () => (
   </svg>
 );
 
+const LetterboxdLogo = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    role="img"
+  >
+    <circle cx="7" cy="12" r="4.5" fill="#40BCF4" />
+    <circle cx="12" cy="12" r="4.5" fill="#00E054" />
+    <circle cx="17" cy="12" r="4.5" fill="#FF8000" />
+  </svg>
+);
+
 export default function Contact() {
   const socialLinks = [
     {
@@ -46,6 +59,12 @@ export default function Contact() {
         </svg>
       ),
       className: "border-emerald-600/50 bg-emerald-600/10 text-emerald-300 hover:bg-emerald-600/30 hover:border-emerald-400 hover:text-emerald-200",
+    },
+    {
+      label: "Letterboxd",
+      href: "https://letterboxd.com/aisinghal/",
+      icon: LetterboxdLogo,
+      className: "border-orange-600/50 bg-orange-600/10 text-orange-200 hover:bg-orange-600/30 hover:border-orange-300 hover:text-orange-100",
     },
   ];
 
@@ -133,7 +152,9 @@ export default function Contact() {
                       {socialLinks.map((link, index) => (
                         <motion.div
                           key={link.label}
-                          className="w-full flex justify-center"
+                          className={`w-full flex justify-center ${
+                            link.label === "Letterboxd" ? "sm:col-span-2 sm:max-w-[calc(50%-0.5rem)]" : ""
+                          }`}
                           {...hoverMotion}
                           transition={{ ...hoverMotion.transition, delay: index * 0.03 }}
                         >

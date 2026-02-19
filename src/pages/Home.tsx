@@ -35,6 +35,19 @@ const XLogo = () => (
   </svg>
 );
 
+const LetterboxdLogo = ({ className }: { className?: string }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    role="img"
+  >
+    <circle cx="7" cy="12" r="4.5" fill="#40BCF4" />
+    <circle cx="12" cy="12" r="4.5" fill="#00E054" />
+    <circle cx="17" cy="12" r="4.5" fill="#FF8000" />
+  </svg>
+);
+
 const ScholarIcon = () => (
   <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z" />
@@ -74,6 +87,12 @@ export default function Home() {
       href: "https://scholar.google.com/citations?user=QJn7KLkAAAAJ&hl=en",
       icon: ScholarIcon,
       className: "border-emerald-500/40 bg-emerald-500/10 text-emerald-200 hover:border-emerald-300 hover:bg-emerald-500/20",
+    },
+    {
+      label: "Letterboxd",
+      href: "https://letterboxd.com/aisinghal/",
+      icon: LetterboxdLogo,
+      className: "border-orange-500/50 bg-orange-500/10 text-orange-200 hover:border-orange-300 hover:bg-orange-500/25",
     },
   ];
 
