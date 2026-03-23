@@ -393,7 +393,7 @@ function shuffleIndices(length: number) {
                   </motion.div>
                 </div>
                 <p className="mt-3 text-center text-sm text-gray-400">
-                  Me at Kauai, Hawaii this past winter break!
+                  Me at Kauai, Hawaii (Winter '26)!
                 </p>
                 <motion.div
                   initial={{ opacity: 0, y: 14 }}
